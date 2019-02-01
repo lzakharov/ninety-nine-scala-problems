@@ -34,7 +34,8 @@ object P27 {
   } yield List(a, b, xs.diff(b))
 
   def group[A](sizes: List[Int], xs: List[A]): List[List[List[A]]] = {
-    if (sizes.isEmpty) Nil
+    if (sizes.sum > xs.length) throw new IllegalArgumentException
+    else if (sizes.isEmpty) Nil
     else combinations(sizes.head, xs).flatMap(c => group(sizes.tail, xs.diff(c)).map(c :: _))
   }
 }
