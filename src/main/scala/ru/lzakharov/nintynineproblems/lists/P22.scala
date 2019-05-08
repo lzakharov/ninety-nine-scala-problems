@@ -22,6 +22,7 @@ object P22 {
       if (start > end) res
       else rangeTailRecursive(start + 1, end, start :: res)
     }
+
     rangeTailRecursive(start, end, Nil)
   }
 }

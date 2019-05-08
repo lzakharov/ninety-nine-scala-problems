@@ -18,6 +18,7 @@ object P05 {
       case Nil => res
       case head :: tail => reverseTailRecursive(tail, head :: res)
     }
+
     reverseTailRecursive(xs, Nil)
   }
 }

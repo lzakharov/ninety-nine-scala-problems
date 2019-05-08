@@ -18,6 +18,7 @@ object P04 {
       case Nil => n
       case _ :: tail => lengthTailRecursive(tail, n + 1)
     }
+
     lengthTailRecursive(xs, 0)
   }
 }
